@@ -5,16 +5,16 @@
 wordpress_sites:
   calzadopretty.com:
     site_hosts:
-      - canonical: www.calzadopretty.com
+      - canonical: www.josedudev.xyz
         redirects:
-          - calzadopretty.com
+          - josedudev.xyz
     local_path: ../calzadopretty.com # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:josedu90/calzadopretty.com.git # replace with your Git repo URL
     repo_subtree_path: calzadopretty.com # relative path to your Bedrock/WP directory in your repo
     branch: master
     multisite:
       enabled: false
-    ssl:-[]
+    ssl:
       enabled: true
       provider: letsencrypt
     cache:
