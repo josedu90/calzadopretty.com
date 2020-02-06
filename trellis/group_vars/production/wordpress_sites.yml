@@ -1,0 +1,21 @@
+# Documentation: https://roots.io/trellis/docs/remote-server-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/production/vault.yml
+
+wordpress_sites:
+  calzadopretty.com:
+    site_hosts:
+      - canonical: www.calzadopretty.com
+        redirects:
+          - calzadopretty.com
+    local_path: ../calzadopretty.com # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:josedu90/calzadopretty.com.git # replace with your Git repo URL
+    repo_subtree_path: calzadopretty.com # relative path to your Bedrock/WP directory in your repo
+    branch: master
+    multisite:
+      enabled: false
+    ssl:-[]
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: true
