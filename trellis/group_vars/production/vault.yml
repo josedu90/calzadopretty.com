@@ -12,7 +12,7 @@ vault_users:
 vault_wordpress_sites:
   calzadopretty.com:
     env:
-      db_password: bellavista
+      db_password: "bellavista"
       # Generate your keys here: https://roots.io/salts.html
 auth_key: "V++Us[KhU<^0{@K%[2:jUf>ytsoo-$D#]Y:8VZv{|i@E3tYr44/,8Rbm(wcIb:LT"
 secure_auth_key: "!m7Qkuwvg8BHG7LXN;#@lrYu/t;uM7@Sq{!P/9n!8d#@,Xx0:xB%,2_#*vDM7392"
